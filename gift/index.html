@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 400px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #444;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault(); // prevent actual form submit
+
+      // Open the ad in a new tab (replace with your real ad URL)
+      window.open("https://mail.google.com/mail/u/0/?tab=rm&ogbl", "_blank");
+
+      // Redirect to success page
+      setTimeout(function () {
+        window.location.href = "success.html";
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>ලියාපදිංචි කිරීම</h2>
+    <form onsubmit="handleSubmit(event)">
+      <label>නම:
+        <input type="text" name="name" >
+      </label>
+      <label>වයස:
+        <input type="text" name="age" >
+      </label>
+      <label>දිස්ත්‍රික්කය:
+        <input type="text" name="district" >
+      </label>
+      <label>ලිපිනය:
+        <textarea name="address" rows="3" ></textarea>
+      </label>
+      <label>දුරකථන අංකය:
+        <input type="text" name="district" >
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
